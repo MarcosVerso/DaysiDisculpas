@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui;
+}
+
+.loader{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 8px rgb(32, 119, 233) solid;
+    border-top: 8px rgb(123, 231, 226) solid;
+    animation-name: loaderAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loaderAnim{
+    from{
+        transform: rotate(45deg)
+    }
+    to{
+        transform: rotate(calc(45deg + 360deg));
+    }
+}
+
+.centrado{
+    justify-items: center;
+    justify-self: center;
+    margin-top: 33.33vh;
+}
+
+.container1{
+    padding: 20px 80px;
+}
