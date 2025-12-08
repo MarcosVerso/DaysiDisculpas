@@ -4,6 +4,15 @@
     font-family: system-ui;
 }
 
+body{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(54, 54, 59), rgb(31, 1, 21));
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
 .loader{
     width: 32px;
     height: 32px;
@@ -13,6 +22,44 @@
     animation-name: loaderAnim;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}
+
+.caja1{
+    border-radius: 8px;
+    padding: 32px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.caja1 button{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.divFoto1{
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.divFoto1 img{
+    position: relative;
+    top: 0px;
+    width: 80vw;
+}
+
+.foto3{
+    border-radius: 12px;
+    position: relative;
+    width: 20vw;
+    margin-bottom: 32px;
 }
 
 @keyframes loaderAnim{
@@ -31,5 +78,55 @@
 }
 
 .container1{
-    padding: 20px 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 8px;
+    margin: 0 auto;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+}
+
+button{
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+button:hover{
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+button:active{
+    background-color: rgb(150, 150, 150);
+    filter: drop-shadow(0px 0px 5px white);
+    transform: scale(0.8);
+}
+
+.container1 button{
+    
+}
+
+@keyframes fondoSpawn{
+    from{
+        backdrop-filter: blur(0px);
+    }
+
+    to{
+        backdrop-filter: blur(6px);
+    }
+}
+
+@keyframes modalSpawn{
+    from{
+        transform: scale(0, 0);
+    }
+
+    to{
+        transform: scale(1,1);
+    }
 }
